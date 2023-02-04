@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .out{
+            width: 50px;
+            height: 50px;
+        }
+        .base{
+            width: 100px;
+            height: 100px;
+        }
+        .in{
+            width: 150px;
+            height: 150px;
+        }
+
+        img{
+            margin: 0px auto;
+        }
+        button{
+            margin: 10px 0px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div>
+        <img class="base"  id="img1" src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Gallet_clamshell_600x600_movement.jpg">
+        <p>
+        <button class="botao1" onclick="aumentar1()">Zoom in</button>
+        <button class="botao1" onclick="diminuir1()">Zoom out</button>
+        </p>
+        <img class="base" id="img2" src="https://sjdigital.vtexassets.com/arquivos/ids/191789/medicamento_controlado_generico-.jpg?v=637998190371030000">
+        <p>
+        <button class="botao2" onclick="aumentar2()">Zoom in</button>
+        <button class="botao2" onclick="diminuir2()">Zoom out</button>
+        </p>
+    </div>
+    <script>
+        const img1 = document.getElementById('img1');
+        const img2 = document.getElementById('img2');
+        
+        function aumentar1(){
+            if(img1.classList.contains('base')){
+                img1.classList.remove('base');
+                img1.classList.add('in');
+            }else if(img1.classList.contains('out')){
+                img1.classList.remove('out');
+                img1.classList.add('base');
+            }
+        }
+        function diminuir1(){
+            if(img1.classList.contains('base')){
+                img1.classList.remove('base');
+                img1.classList.add('out');
+            }else if(img1.classList.contains('in')){
+                img1.classList.remove('in');
+                img1.classList.add('base');
+            }
+        }
+        function aumentar2(){
+            if(img2.classList.contains('base')){
+                img2.classList.remove('base');
+                img2.classList.add('in');
+            }else if(img2.classList.contains('out')){
+                img2.classList.remove('out');
+                img2.classList.add('base');
+            }
+        }
+        function diminuir2(){
+            if(img2.classList.contains('base')){
+                img2.classList.remove('base');
+                img2.classList.add('out');
+            }else if(img2.classList.contains('in')){
+                img2.classList.remove('in');
+                img2.classList.add('base');
+            }
+        }
+    </script>
+</body>
+</html>
