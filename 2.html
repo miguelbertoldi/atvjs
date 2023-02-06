@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table td,th{
+            border: solid black 1px;
+        }
+        table{
+            width: 300px;
+            height: 40px;
+            margin: 1px auto;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th onclick="azul()">Livros</th>
+                <th onclick="verde()">Páginas</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th onclick="azul()">O Senhor dos Anéis</th>
+                <th onclick="verde()">1402</th>
+            </tr>
+            <tr>
+                <th onclick="azul()">Ozob - Protocolo Molotov</th>
+                <th onclick="verde()">420</th>
+            </tr>
+            <tr>
+                <th onclick="azul()">O Senhor dos Anéis</th>
+                <th onclick="verde()">1402</th>
+            </tr>
+            <tr>
+                <th onclick="azul()">O Senhor dos Anéis</th>
+                <th onclick="verde()">1402</th>
+            </tr>
+            <tr>
+                <th onclick="azul()">O Senhor dos Anéis</th>
+                <th onclick="verde()">1402</th>
+            </tr>
+            <tr>
+                <th onclick="azul()">O Senhor dos Anéis</th>
+                <th onclick="verde()">1402</th>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        const celulaPrimeiraColuna = document.querySelectorAll('table th:first-child');
+        const celulaSegundaColuna = document.querySelectorAll('table th:last-child');
+
+        function azul(){
+            for(let i=0; i<celulaPrimeiraColuna.length; i++){
+                celulaSegundaColuna[i].style.backgroundColor = 'white';
+                celulaPrimeiraColuna[i].style.backgroundColor = 'blue';
+            }
+        }
+        function verde(){
+            for(let i=0; i<celulaPrimeiraColuna.length; i++){
+                celulaPrimeiraColuna[i].style.backgroundColor = 'white';
+                celulaSegundaColuna[i].style.backgroundColor = 'green';
+            }
+        }
+    </script>
+</body>
+</html>
