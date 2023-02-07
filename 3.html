@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .submit{
+            width: 50px !important;
+            margin: 1px 45%;
+        }
+        input{
+            width: 200px;
+            margin: 1px 40%;
+        }
+        div {
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <input type="text"  id="t1">
+        <br><br><br>
+        <input type="text" id="t2" >
+        <br><br><br>
+        <input type="text" id="t3" >
+        <br><br><br>
+        <input type="text" id="t4" >
+        <br><br><br>
+        <input type="text" id="t5" >
+        <br><br><br>
+        <input type="text" id="t6" >
+        <br><br><br>
+        <input type="submit" class="submit" onclick="botao()">
+
+        <ol id="lista"></ol>
+    </div>
+
+        <script>
+            const lista = document.getElementById('lista');
+            let texto = [];
+            function botao(){
+                texto[0] = document.querySelector('#t1').value;
+                texto[1] = document.querySelector('#t2').value;
+                texto[2] = document.querySelector('#t3').value;
+                texto[3] = document.querySelector('#t4').value;
+                texto[4] = document.querySelector('#t5').value;
+                texto[5] = document.querySelector('#t6').value;
+                
+                for(let i=0; i<texto.length; i++){
+                    const item = document.createElement('li');
+                    item.innerText = texto[i];
+                    lista.appendChild(item);
+                }
+            }
+
+
+
+        </script>
+</body>
+</html>
