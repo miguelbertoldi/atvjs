@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+  <title>Document</title>
+  <style>
+    .azul {
+      color: blue;
+    }
+    .vermelho {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+<button onclick="inverter()">Inverter cores</button>
+<br />
+  <ul>
+    <li class="azul">item</li>
+    <li class="vermelho">item</li>
+    <li class="azul">item</li>
+    <li class="vermelho">item</li>
+    <li class="azul">item</li>
+    <li class="vermelho">item</li>
+  </ul>
+  <script>
+    const item = document.getElementsByTagName('li');
+
+    function inverter(){
+        for(let i=0; i<item.length; i++){
+            if(item[i].classList.contains('azul')){
+                item[i].classList = 'vermelho';
+            }else{
+                item[i].classList = 'azul';
+            }
+        }
+    }
+  </script>  
+</body>
+</html>
